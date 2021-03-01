@@ -7,11 +7,13 @@ var serverURL = "https://api.funtranslations.com/translate/minion.json";
 function getTranslationUrl(text) {
   return serverURL + "?" + "text=" + text;
 }
+
 //calling server for processing
 function errorHandler(error) {
   console.log("error occured", error);
   alert("something went wrong !!");
 }
+
 function clickHandler() {
   var inputText = txtInput.Value;
 
@@ -23,4 +25,5 @@ function clickHandler() {
     })
     .catch(errorHandler);
 }
+
 btnTranslate.addEventListener("click", clickHandler);
